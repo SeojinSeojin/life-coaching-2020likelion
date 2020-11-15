@@ -24,7 +24,7 @@ body {
     display:grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 10px;
-    width: 60%;
+    width: 80%;
     height:fit-content;
     padding:2%;
     background-color: #fff8e1;
@@ -32,12 +32,22 @@ body {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.15);
 
 }
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+        color: orange;
+        transition:0.7s;
+}
+
 .menu{
     align-content: center;
     position: relative;
     top:34%;
     font-size:15px;
     text-align: center;
+    transition: 0.4s;
     word-spacing: 100px;
 }
 #commit{
@@ -53,6 +63,75 @@ body {
     font-size:20px;
 }
 #content{
-    padding-top:3px;
+    padding-top:8%;
     font-size:15px;
 }
+#open{
+    position: absolute;
+    top:2%;
+    left:5%;
+    color:#251D16;
+}
+#open:hover{
+    color: orange;
+    transition:0.7s;
+}
+@media (max-width:768px){
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff8e1;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: orange;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 50px;
+    margin-left: 50px;
+}
+
+@media (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+#tab{
+    display: none;
+}
+.box {
+    width: 65%;
+}
+}
+
+@media (min-width:768px){
+    #open{
+        display: none;
+    }
+    .side{
+        display: none;
+    }
+    .box{
+        height:30%;
+    }
+}
+
