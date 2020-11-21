@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <link rel="stylesheet" href="css/user_style.css" />
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+</head>
+
+<body>
+    <div class="custom-card">
+        <div class="custom-card-title">Sign In</div>
+        <div class="input-field" style="width: 20rem">
+            <input id="username" type="text" style="font-size: 1.6rem" />
+            <label for="username" class="border:#f57f17 1px solid">이름</label>
+        </div>
+        <select>
+        <option value="" disabled selected>학년 선택</option>
+        <option value="1">초등 저학년</option>
+        <option value="2">초등 고학년</option>
+        <option value="3">중등</option>
+        <option value="4">고등</option>
+        <option value="5">대학생</option>
+        <option value="6">직장인</option>
+        <option value="7">학부모</option>
+      </select>
+        <label>Grade Select</label>
+        <select multiple>
+        <option value="" disabled>관심 분야 선택</option>
+        <option value="1">기초 코딩</option>
+        <option value="2">수학</option>
+        <option value="3">과학</option>
+        <option value="4">언어학</option>
+        <option value="5">인공지능</option>
+        <option value="6">실무 지식</option>
+      </select>
+        <label>Subjects Select</label>
+        <div class="input-field" style="width: 20rem">
+            <input id="email" type="email" class="validate" style="font-size: 1.6rem" />
+            <label for="email" class="border:#f57f17 1px solid">Email</label>
+        </div>
+        <div class="input-field" style="width: 20rem">
+            <input id="password" type="password" class="validate" style="font-size: 1.6rem" />
+            <label for="password">비밀번호</label>
+        </div>
+        <div class="input-field" style="width: 20rem">
+            <input id="password2" type="password" class="validate" style="font-size: 1.6rem" />
+            <label for="password2">비밀번호 확인</label>
+        </div>
+        <a class="waves-effect waves-light btn-large amber darker-1" style="width: 20rem; margin-top: 1rem; font-size: 1.5rem">Sign Up</a
+      >
+    </div>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js "></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var elems = document.querySelectorAll("select");
+        var options = {};
+        var instances = M.FormSelect.init(elems, options);
+      });
+    </script>
+  </body>
+</html>
