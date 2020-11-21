@@ -12,12 +12,13 @@
 
 <body>
     <div class="custom-card">
-        <div class="custom-card-title">Sign In</div>
+        <div class="custom-card-title">Sign Up</div>
+        <form action="/create" method="POST">
         <div class="input-field" style="width: 20rem">
             <input id="username" type="text" style="font-size: 1.6rem" />
             <label for="username" class="border:#f57f17 1px solid">이름</label>
         </div>
-        <select>
+        <!-- <select>
         <option value="" disabled selected>학년 선택</option>
         <option value="1">초등 저학년</option>
         <option value="2">초등 고학년</option>
@@ -37,7 +38,7 @@
         <option value="5">인공지능</option>
         <option value="6">실무 지식</option>
       </select>
-        <label>Subjects Select</label>
+        <label>Subjects Select</label> -->
         <div class="input-field" style="width: 20rem">
             <input id="email" type="email" class="validate" style="font-size: 1.6rem" />
             <label for="email" class="border:#f57f17 1px solid">Email</label>
@@ -50,9 +51,10 @@
             <input id="password2" type="password" class="validate" style="font-size: 1.6rem" />
             <label for="password2">비밀번호 확인</label>
         </div>
-        <a class="waves-effect waves-light btn-large amber darker-1" style="width: 20rem; margin-top: 1rem; font-size: 1.5rem">Sign Up</a
-      >
+        <button type=submit  class="waves-effect waves-light btn-large amber darker-1" style="width: 20rem; margin-top: 1rem; font-size: 1.5rem">Sign Up</button>
+        </form>
     </div>
+   
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js "></script>
     <script>
