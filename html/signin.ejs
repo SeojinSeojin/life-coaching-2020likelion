@@ -13,9 +13,9 @@
 <body>
     <div class="custom-card">
         <div class="custom-card-title">Sign Up</div>
-        <form action="/create" method="POST">
+        <form action="/signin" method="POST">
         <div class="input-field" style="width: 20rem">
-            <input id="username" type="text" style="font-size: 1.6rem" />
+            <input name="username" id="username" type="text" style="font-size: 1.6rem" />
             <label for="username" class="border:#f57f17 1px solid">이름</label>
         </div>
         <!-- <select>
@@ -40,18 +40,18 @@
       </select>
         <label>Subjects Select</label> -->
         <div class="input-field" style="width: 20rem">
-            <input id="email" type="email" class="validate" style="font-size: 1.6rem" />
+            <input name="email" id="email" type="email" class="validate" style="font-size: 1.6rem" />
             <label for="email" class="border:#f57f17 1px solid">Email</label>
         </div>
         <div class="input-field" style="width: 20rem">
-            <input id="password" type="password" class="validate" style="font-size: 1.6rem" />
+            <input name="password" id="password" type="password" class="validate" style="font-size: 1.6rem" />
             <label for="password">비밀번호</label>
         </div>
         <div class="input-field" style="width: 20rem">
-            <input id="password2" type="password" class="validate" style="font-size: 1.6rem" />
+            <input name="password2" id="password2" type="password" class="validate" style="font-size: 1.6rem" />
             <label for="password2">비밀번호 확인</label>
         </div>
-        <button type=submit  class="waves-effect waves-light btn-large amber darker-1" style="width: 20rem; margin-top: 1rem; font-size: 1.5rem">Sign Up</button>
+        <button type="submit"  class="waves-effect waves-light btn-large amber darker-1" style="width: 20rem; margin-top: 1rem; font-size: 1.5rem">Sign Up</button>
         </form>
     </div>
    

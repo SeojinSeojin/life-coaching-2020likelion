@@ -1,6 +1,9 @@
 const User = require("../models/user");
-var db = require('../db');
-const { urlencoded } = require("body-parser");
+var db = require('../mongoose');
+
+exports.rederjoinform = (req,res) => {
+  res.render("html/signin");
+}
 
 exports.createuser = (req, res) => {
     var user = new User();
@@ -23,3 +26,4 @@ exports.createuser = (req, res) => {
         }
     });
 };
+

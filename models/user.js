@@ -1,7 +1,6 @@
-const mongoose = require("mongoose")
+const mongoose = require('mongoose')
 const validator = require('validator')
 
-// const User = mongoose.model('User', {
 const UserSchema = mongoose.Schema({
     name: {
     type: String,
@@ -36,13 +35,14 @@ const UserSchema = mongoose.Schema({
 
 })
 
-const User = mongoose.model('User', UserSchema);
+// module.exports = mongoose.model("User", UserSchema);
+var User = mongoose.model('User', UserSchema);
 
 User.create = (newuser, result) => {
     newuser.save(function(err, newuser){
         if (err) {
             console.log("error");
-            result(err,null);
+            result(err, null);
             return;
         }
         else {
@@ -52,5 +52,4 @@ User.create = (newuser, result) => {
         }
     });
 }
-
 
