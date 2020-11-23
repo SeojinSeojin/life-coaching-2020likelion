@@ -1,5 +1,5 @@
 const express = require("express");
-const User = require("../../../node-course/task-manager/src/models/user");
+const Controller = require("../controllers/auth");
 
 const core_router = express.Router();
 
@@ -19,8 +19,9 @@ core_router.get("/signin", (req, res) => {
     res.render("signin.ejs")
 })
 
-const { signUp } = require("../controllers/auth"); 
-
-core_router.post("/signin", signUp) 
+core_router.post('/signin', function(req, res){
+    Controller.createuser
+    res.render("login.ejs")
+  });
 
 module.exports = core_router

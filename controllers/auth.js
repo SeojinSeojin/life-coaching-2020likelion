@@ -1,10 +1,6 @@
 const User = require("../models/user");
 var db = require('../mongoose');
 
-exports.rederjoinform = (req,res) => {
-  res.render("html/signin");
-}
-
 exports.createuser = (req, res) => {
     var user = new User();
     user.name = req.body.username;
@@ -26,4 +22,5 @@ exports.createuser = (req, res) => {
         }
     });
 };
+
 

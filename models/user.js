@@ -8,10 +8,10 @@ const UserSchema = mongoose.Schema({
     trim:true,
     lowercase:true
     },
-    // age: {
-    // type: Number,
-    // required:true
-    // },
+    age: {
+    type: Number,
+    required:true
+    },
     // field:{
     //     type:Array,
     //     required:true
@@ -31,12 +31,17 @@ const UserSchema = mongoose.Schema({
         type:String,
         required:true,
         trim:true,
+    },
+    password2:{
+        type:String,
+        required:true,
+        trim:true,
     }
 
 })
 
 // module.exports = mongoose.model("User", UserSchema);
-var User = mongoose.model('User', UserSchema);
+const User = mongoose.model('User', UserSchema);
 
 User.create = (newuser, result) => {
     newuser.save(function(err, newuser){
@@ -53,3 +58,18 @@ User.create = (newuser, result) => {
     });
 }
 
+
+
+// const me = new User({
+//     name: '오서령',
+//     age: 24,
+//     email:'osr0423@naver.com',
+//     password: 'dhtjfud',
+//     password2: 'dhtjfud'
+// })
+
+// me.save().then(() => {
+//     console.log(me)
+// }).catch((error) => {
+//     console.log('Error!', error)
+// })

@@ -1,8 +1,12 @@
 const express = require("express");
 const app = express();
+const mongoose = require('./mongoose');
+// const User = require('./models/user');
+const bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
-require('./mongoose')
-const User = require('./models/user')
+mongoose.connect('mongodb://127.0.0.1:27017/commit-db');
 
 app.set("view engine", "ejs");
 app.set("views", "./html");
@@ -18,8 +22,6 @@ app.use("/", core_router);
 app.use("/lecture", lecture_router);
 app.use("/user", user_router);
 app.use("/teacher", teacher_router);
-app.use(bodyparser.urlencoded({extended:true}));
-app.use(bodyparser.json());
 
 const PORT = 3010;
 app.listen(PORT, () => {
