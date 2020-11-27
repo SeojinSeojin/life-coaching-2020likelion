@@ -1,4 +1,5 @@
-const express = require("express")
+const express = require("express");
+const Controller = require("../controllers/auth");
 
 const core_router = express.Router();
 
@@ -17,5 +18,10 @@ core_router.get("/login", (req, res) => {
 core_router.get("/signin", (req, res) => {
     res.render("signin.ejs")
 })
+
+core_router.post('/signin', function(req, res){
+    Controller.createuser
+    res.render("login.ejs")
+  });
 
 module.exports = core_router
