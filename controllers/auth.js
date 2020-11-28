@@ -67,7 +67,7 @@ exports.loginuser = (req, res) => {
                 `);
                     } else {
                         console.log('welcome');
-                        res.redirect("/mypage");
+                        res.redirect("/user");
                     }
                 })
         }

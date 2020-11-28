@@ -1,5 +1,6 @@
 const express = require("express");
 const authController = require("../controllers/auth");
+const User = require("../models/user");
 
 const core_router = express.Router();
 
@@ -17,10 +18,6 @@ core_router.get("/login", (req, res) => {
 
 core_router.get("/signin", (req, res) => {
     res.render("signin.ejs")
-})
-
-core_router.get("/mypage", (req, res) => {
-    res.render("mypage.ejs")
 })
 
 core_router.post('/signin', function(req, res) {
