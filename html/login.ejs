@@ -13,6 +13,7 @@
 <body>
     <div class="custom-card">
         <div class="custom-card-title">Log In</div>
+        <form action="/login" method="POST">
         <div class="input-field" style="width: 20rem">
             <input id="email" type="email" class="validate" style="font-size: 1.6rem" />
             <label for="email" class="border:#f57f17 1px solid">Email</label>
@@ -20,14 +21,14 @@
         <div class="input-field" style="width: 20rem">
             <input id="password" type="password" class="validate" style="font-size: 1.6rem" />
             <label for="password">PW</label>
-        </div>
-        <a class="waves-effect waves-light btn-large amber darken-1" style="width: 20rem; margin-top: 1rem; font-size: 1.5rem">Log in</a
-      >
-      <a
+        </div>          
+        <button type="submit"  class="waves-effect waves-light btn-large amber darken-1" style="width: 20rem; margin-top: 1rem; font-size: 1.5rem">Log in</button>
+        </form>
+        <a
         class="waves-effect waves-light btn-large amber lighten-2"
         style="width: 20rem; margin-top: 1rem; font-size: 1.5rem"
-        >Sign in</a
-      >
+        href="/signin"
+        >Sign up</a>
     </div>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js "></script>

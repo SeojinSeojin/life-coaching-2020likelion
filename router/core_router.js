@@ -23,4 +23,12 @@ core_router.post('/signin', function(req, res) {
     authController.createuser(req, res);
 });
 
+core_router.get("/qna", (req, res) => {
+    res.render("qna.ejs")
+})
+
+core_router.get("/review", (req, res) => {
+    res.render("review.ejs")
+})
+
 module.exports = core_router;
