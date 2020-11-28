@@ -1,5 +1,5 @@
 const User = require("../models/user");
-var db = require('../mongoose');
+var db = require('../mongoose')
 
 exports.createuser = (req, res) => {
     /*
@@ -43,3 +43,35 @@ exports.createuser = (req, res) => {
         })
     }
 };
+
+
+exports.loginuser = (req, res) => {
+    User.findOne({ email: req.body.email }, (err, user) => {
+        if (err) { 
+            return res.json(err);
+        } if (!user) {
+            console.log('Cannot find user');
+            res.send(`
+                    <h1>해당 이메일을 찾을 수 없습니다.</h1>
+                `);
+
+        } else {
+            User.findOne({ password: req.body.password })
+                .exec((err, user) => {
+                    if (err) return res.json(err);
+
+                    if (!user) {
+                        console.log('login failed');
+                        res.send(`
+                    <h1>비밀번호가 틀렸습니다</h1>
+                `);
+                    } else {
+                        console.log('welcome');
+                        res.redirect("/mypage");
+                    }
+                })
+        }
+      });
+      
+    
+}

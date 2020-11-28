@@ -10,5 +10,7 @@ user_router.get("/", (req, res) => {
 
 user_router.post('/signin', Controller.createuser);
 
+user_router.post('/login', Controller.loginuser);
+
 
 module.exports = user_router

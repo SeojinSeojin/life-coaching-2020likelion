@@ -19,8 +19,16 @@ core_router.get("/signin", (req, res) => {
     res.render("signin.ejs")
 })
 
+core_router.get("/mypage", (req, res) => {
+    res.render("mypage.ejs")
+})
+
 core_router.post('/signin', function(req, res) {
     authController.createuser(req, res);
+});
+
+core_router.post('/login', function(req, res) {
+    authController.loginuser(req, res);
 });
 
 core_router.get("/qna", (req, res) => {
