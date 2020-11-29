@@ -10,6 +10,9 @@ const TeacherSchema = mongoose.Schema({
     field:{
         type:Array,
         required:true
+    },
+    lecturelist:{
+        type:Array
     }
 })
 
