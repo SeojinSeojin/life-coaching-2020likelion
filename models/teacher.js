@@ -7,12 +7,12 @@ const TeacherSchema = mongoose.Schema({
         required: true,
         trim: true,
     },
-    field:{
-        type:Array,
-        required:true
+    field: {
+        type: Array,
+        required: true
     },
-    lecturelist:{
-        type:Array
+    lecturelist: {
+        type: Array
     }
 })
 
