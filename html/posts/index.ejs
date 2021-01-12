@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="description" content="Mobile Application HTML5 Template">
+
+    <meta name="copyright" content="MACode ID, https://www.macodeid.com/">
+
+    <title>Mobster - One page app template</title>
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/css/maicons.css">
+
+    <link rel="stylesheet" href="/vendor/animate/animate.css">
+
+    <link rel="stylesheet" href="/vendor/owl-carousel/css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="/css/bootstrap.css">
+
+    <link rel="stylesheet" href="/css/mobster.css">
+</head>
+
+<body>
+
+    <%- include('../nav.ejs') %>
+
+        <main style="background-image: url(/img/5-01.svg); background-size:cover; align-items:center;">
+
+            <div class="page-hero-section bg-image hero-mini">
+                <div class="hero-caption">
+                    <div class="container h-100">
+                        <div class="row justify-content-center align-items-center text-center h-100">
+                            <div class="col-lg-6">
+                                <h3 class="mb-4 fw-medium">QnA 게시판</h3>
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb breadcrumb-dark justify-content-center bg-transparent">
+                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">강의</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-section" style="padding-top: 0px;">
+                <div class="container">
+                    <div class="row" style="align-content: center;">
+                        <div class="py-3" style="width:1000px;">
+                            <article class="blog-single-entry" style="padding-left: 150px;">
+                                <div class="container">
+                                <table class="table table-striped" style="border-bottom: 1px solid #E4E1EB;">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">제목</th>
+                                            <th scope="col" class="date">날짜</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% if(posts == null || posts.length == 0){ %>
+                                          <tr>
+                                            <td colspan=2> 게시된 질문이 없습니다. :( </td>
+                                          </tr>
+                                        <% } %>
+                                        <% posts.forEach(function(post) { %>
+                                          <tr>
+                                            <td style="width: 600px;">
+                                              <a href="/posts/<%= post._id %>"><div class="ellipsis"><%= post.title %></div></a>
+                                            </td>
+                                            <td class="date">
+                                              <span><%= post.createdAt.toLocaleDateString() %></span> <!-- 1 -->
+                                            </td>
+                                          </tr>
+                                        <% }) %>
+                                      </tbody>
+                                </table>
+                                <div style="padding-left: 700px;">
+                                <a href="/posts/new" class="btn btn-primary rounded-pill">글쓰기</a></div>
+                             </div>
+                            </article>
+                        </div>                             
+                        </div>
+                            <!-- end comment -->
+                        </div> 
+                        <!-- .row -->
+                    </div>
+                </div>
+
+        </main>
+
+        <%- include("../foot.ejs")  %>
+            <!-- .page-footer -->
+
+            <script src="/js/jquery-3.5.1.min.js"></script>
+
+            <script src="/js/bootstrap.bundle.min.js"></script>
+
+            <script src="/vendor/owl-carousel/js/owl.carousel.min.js"></script>
+
+            <script src="/vendor/wow/wow.min.js"></script>
+
+            <script src="/js/mobster.js"></script>
+
+            <script src="/controllers/script.js"></script>
+
+</body>
+
+</html>

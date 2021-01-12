@@ -1,4 +1,5 @@
 const User = require("../models/user");
+const Notices = require("../models/qna");
 var db = require('../mongoose')
 
 exports.createuser = (req, res) => {
@@ -75,3 +76,4 @@ exports.loginuser = (req, res) => {
       
     
 }
+

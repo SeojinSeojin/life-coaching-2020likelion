@@ -28,8 +28,12 @@ core_router.post('/login', function(req, res) {
     authController.loginuser(req, res);
 });
 
-core_router.get("/qna", (req, res) => {
-    res.render("qna.ejs")
+core_router.get("../posts/index", (req, res) => {
+    res.render("index.ejs")
+})
+
+core_router.get("../posts/new", (req, res) => {
+    res.render("new.ejs")
 })
 
 core_router.get("/review", (req, res) => {

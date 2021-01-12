@@ -22,6 +22,7 @@ const core_router = require("./router/core_router");
 const lecture_router = require("./router/lecture_router");
 const user_router = require("./router/user_router");
 const teacher_router = require("./router/teacher_router");
+const qna_router = require("./router/qna_router");
 const { default: validator } = require("validator");
 
 // routing
@@ -29,6 +30,7 @@ app.use("/", core_router);
 app.use("/lecture", lecture_router);
 app.use("/user", user_router);
 app.use("/teacher", teacher_router);
+app.use("/posts", qna_router);
 
 const PORT = 3010;
 app.listen(PORT, () => {
